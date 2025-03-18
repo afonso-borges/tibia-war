@@ -1,56 +1,56 @@
 # Tibia Guild EXP Calculator
 
-Este script calcula a experiência total (EXP) ganha e perdida por guilds específicas no Tibia, utilizando dados do guildstats.eu e da API oficial do Tibia.
+This script calculates the total experience (EXP) gained and lost by specific guilds in Tibia, using data from guildstats.eu and the official Tibia API.
 
-## Funcionalidades
+## Features
 
-- Coleta dados de EXP ganha do guildstats.eu
-- Coleta dados de EXP perdida (mortes) do guildstats.eu
-- Usa a API do Tibia para identificar membros das guilds
-- Calcula o total de EXP para as guilds selecionadas
+- Collects EXP gain data from guildstats.eu
+- Collects EXP loss data (deaths) from guildstats.eu
+- Uses the Tibia API to identify guild members
+- Calculates the total EXP for selected guilds
 
-## Estrutura do Projeto
+## Project Structure
 
-O projeto segue os princípios SOLID e está organizado nos seguintes arquivos:
+The project follows SOLID principles and is organized into the following files:
 
-- `main.py`: Ponto de entrada do programa
-- `tibia_api_client.py`: Cliente para a API do Tibia
-- `exp_data_provider.py`: Provedores de dados de EXP do guildstats.eu
-- `guild_exp_calculator.py`: Calculadora de EXP das guilds
+- `main.py`: Entry point of the program
+- `tibia_api_client.py`: Client for the Tibia API
+- `exp_data_provider.py`: EXP data providers from guildstats.eu
+- `guild_exp_calculator.py`: Guild EXP calculator
 
-## Requisitos
+## Requirements
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Como usar
+## How to Use
 
-1. Edite o arquivo `main.py` e modifique as seguintes variáveis:
+1. Edit the `main.py` file and modify the following variables:
    ```python
-   world = "World"  # Nome do mundo do Tibia
-   target_guilds = ["Guild 1", "Guild 2"]  # Lista das guilds para monitorar
+   world = "World"  # Name of the Tibia world
+   target_guilds = ["Guild 1", "Guild 2"]  # List of guilds to monitor
    ```
 
-2. Execute o script:
+2. Run the script:
    ```bash
    python main.py
    ```
 
-## Extensibilidade
+## Extensibility
 
-O projeto foi desenvolvido seguindo princípios SOLID, permitindo fácil extensão:
+The project was developed following SOLID principles, allowing for easy extension:
 
-1. Para adicionar uma nova fonte de dados de EXP:
-   - Implemente a interface `ExpDataProvider`
-   - Adicione a nova implementação na lista `exp_providers` em `main.py`
+1. To add a new source of EXP data:
+   - Implement the `ExpDataProvider` interface
+   - Add the new implementation to the `exp_providers` list in `main.py`
 
-2. Para usar uma fonte diferente de dados de guild:
-   - Implemente a interface `GuildMemberProvider`
-   - Use a nova implementação ao criar o `GuildExpCalculator` em `main.py`
+2. To use a different source of guild data:
+   - Implement the `GuildMemberProvider` interface
+   - Use the new implementation when creating the `GuildExpCalculator` in `main.py`
 
-## Observações
+## Notes
 
-- O script considera tanto EXP ganha quanto perdida
-- Os resultados mostram o balanço total (ganhos - perdas) para cada guild monitorada
-- Os resultados são mostrados na saída do terminal
+- The script considers both gained and lost EXP
+- The results show the total balance (gains - losses) for each monitored guild
+- Results are displayed in the terminal output
