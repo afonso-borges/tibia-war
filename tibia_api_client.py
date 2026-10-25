@@ -10,7 +10,7 @@ class GuildMemberProvider(ABC):
 
 class TibiaApiClient(GuildMemberProvider):
     def __init__(self):
-        self.base_url = "https://api.tibiadata.com/v4"
+        self.base_url = "https://api.tibiadata.com/v5"
     
     def get_guild_members(self, guild_name: str) -> Set[str]:
         """Get all members of a guild using TibiaData API"""

@@ -6,7 +6,7 @@ This script calculates the total experience (EXP) gained and lost by specific gu
 
 - Collects EXP gain data from guildstats.eu
 - Collects EXP loss data (deaths) from guildstats.eu
-- Uses the Tibia API to identify guild members
+- Uses the TibiaData API v5 to identify guild members
 - Calculates the total EXP for selected guilds
 
 ## Project Structure
@@ -54,3 +54,4 @@ The project was developed following SOLID principles, allowing for easy extensio
 - The script considers both gained and lost EXP
 - The results show the total balance (gains - losses) for each monitored guild
 - Results are displayed in the terminal output
+- TibiaData API v5 keeps the v4 JSON structure; missing guilds now return HTTP 404
