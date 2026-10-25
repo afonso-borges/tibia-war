@@ -9,7 +9,7 @@ class TibiaExpCalculator:
         self.target_guilds = target_guilds
         self.exp_gained_url = f"https://guildstats.eu/mostexp?world={world}&time=0&type=0"
         self.exp_lost_url = f"https://guildstats.eu/deaths?world={world}&type=0"
-        self.tibia_api_url = "https://api.tibiadata.com/v4"
+        self.tibia_api_url = "https://api.tibiadata.com/v5"
         self.guild_members: Dict[str, Set[str]] = {}
         
     def _get_guild_members(self, guild_name: str) -> Set[str]:
